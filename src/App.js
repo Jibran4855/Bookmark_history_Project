@@ -3,7 +3,8 @@ import './App.css';
 import { useEffect } from "react";
 import { useState } from "react";
 import { tab } from '@testing-library/user-event/dist/tab';
-import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+import 'antd/dist/antd.css'; // or
+import 'antd/dist/antd.less';
 import { Button } from 'antd';
 
 
@@ -138,13 +139,14 @@ function App() {
 
   {if(check){
   return (<>
-  <form>
+  <div style={{border: '2px solid black'}}>
+  <form className='App'>
     <input type="text" name="search_bookmark" onChange={HandleSearch}/>
     <Button size={'small'} type="primary" onClick={SearchData} > Search </Button>
   </form>
-    <h1>Jibran</h1>
+    <center><h1>Jibran</h1></center>
     
-    <form>
+    <form className='App'>
       <label>Name: </label>
       <input type="text" name='name' onChange={HandleChange}/>
       <label>link: </label>
@@ -152,7 +154,7 @@ function App() {
     <Button size={'small'} type="primary" onClick={AddData} > Add    </Button>
     </form>
     
-    <table>
+    <center><table>
                 <tr>
                     <th> Name</th>
                     <th> Link</th>
@@ -176,7 +178,8 @@ function App() {
                         </td>
                     </tr>
                 )}
-            </table>
+            </table></center>
+            </div>
 
   </>  
   );
